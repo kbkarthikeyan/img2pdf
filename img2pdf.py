@@ -8,7 +8,6 @@ import os
 def conv_image(file_name, **kwargs):
     tmp = str(file_name).replace(".jpg", ".pdf")
     with open(tmp, "wb") as file:
-        #file.write(img2pdf.convert(["UG_1st_and_2nd_sem.jpg", "UG_3rd_sem.jpg", "UG_4th_sem.jpg", "UG_5th_sem.jpg","UG_6th_sem.jpg", "UG_7th_sem.jpg", "UG_8th_sem.jpg"]))
         file.write(img2pdf.convert([file_name]))
         file.close()
     print("PDF created")
